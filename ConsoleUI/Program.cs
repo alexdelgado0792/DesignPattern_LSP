@@ -13,11 +13,11 @@ namespace ConsoleUI
             accountingVP.LastName = "Stone";
             accountingVP.CalculatePerHourRate(4);
 
-            Employee employee = new Employee();
+            BaseEmployee employee = new CEO();
 
             employee.FirstName = "Alex";
             employee.LastName = "DC";
-            employee.AssignManager(accountingVP);
+            //employee.AssignManager(accountingVP);
             employee.CalculatePerHourRate(2);
 
 
