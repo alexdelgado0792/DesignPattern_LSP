@@ -1,8 +1,9 @@
 using System;
+using DemoLibrary.Interfaces;
 
 namespace DemoLibrary
 {
-    public class Manager : Employee
+    public class Manager : Employee, IManager
     {
         public override void CalculatePerHourRate(int rank)
         {
