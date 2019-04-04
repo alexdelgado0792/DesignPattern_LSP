@@ -1,5 +1,6 @@
 ﻿using System;
 using DemoLibrary;
+using DemoLibrary.Interfaces;
 
 namespace ConsoleUI
 {
@@ -7,17 +8,17 @@ namespace ConsoleUI
     {
         public static void Main(string[] args)
         {
-            Manager accountingVP = new Manager();
+            IManager accountingVP = new CEO();
 
             accountingVP.FirstName = "E mma";
             accountingVP.LastName = "Stone";
             accountingVP.CalculatePerHourRate(4);
 
-            BaseEmployee employee = new CEO();
+            IManaged employee = new Employee();
 
             employee.FirstName = "Alex";
             employee.LastName = "DC";
-            //employee.AssignManager(accountingVP);
+            employee.AssignManager(accountingVP);
             employee.CalculatePerHourRate(2);
 
 
